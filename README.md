@@ -19,3 +19,19 @@
 * remove   : 파일을 삭제하는 작업만 수행
 * chore    : 빌드 테스트 업데이트, 패키지 매니저를 설정 (프로덕션 코드 변경 X)
 * style    : 코드 포맷 변경, 세미 콜론 누락, 코드 수정이 없는 경우
+
+
+## 자동차 게임 제약 사항
+
+* 자바8로실행하는지확인
+* JDK에서제공하는Random및ScannerAPI대신camp.nextstep.edu.missionutils에서제공하
+  는Randoms및ConsoleAPI를사용
+* ApplicationTest에있는2개의TestCase가성공해
+  야한다
+* 자바 코드 컨벤션 구글코드스타일
+* depth 1까지만 허용
+* 자바8에 추가된 streamapi를 사용하지않고 구현
+* 함수(또는메소드)의 길이가 10라인을 넘어가지 않도록 구현
+* 일급 콜렉션활용, 모든 원시값과 문자열을 포장
+* UI 제외한 도메인 로직에 단위 테스트를 구현
+
