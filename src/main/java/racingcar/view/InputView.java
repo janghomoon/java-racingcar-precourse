@@ -9,7 +9,7 @@ import racingcar.util.ValidationUtil;
 
 public class InputView {
 
-  public List<String> getInputValue() {
+  public static List<String> getCarNames() {
     System.out.println(Message.FIRST_MESSAGE.getMsg());
     String inputs = Console.readLine();
     List<String> carNames = new ArrayList<>();
@@ -18,8 +18,15 @@ public class InputView {
       carNames = ParserUtil.StringToList(inputs);
     } catch (IllegalArgumentException e) {
       System.out.println(e.getMessage());
-      getInputValue();
+      getCarNames();
     }
     return carNames;
+  }
+
+  public static Integer getGameCount() {
+    System.out.println(Message.COLLECT_MESSAGE.getMsg());
+    String input = Console.readLine();
+    ValidationUtil.isNull(input);
+    return Integer.valueOf(input);
   }
 }
