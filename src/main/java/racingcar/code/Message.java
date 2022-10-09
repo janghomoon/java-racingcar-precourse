@@ -7,7 +7,7 @@ public enum Message {
   FIRST_MESSAGE("경주할 자동차 이름을 입력하세요.(이름은쉼표(,) 기준으로 구분)"),
   ROUND_COUNT_MESSAGE("시도할 회수는 몇회인가요?"),
   ROUND_END_MESSAGE("실행 결과"),
-  WINNER_MESSAGE("최종 우승자: "),
+  WINNER_MESSAGE("최종 우승자"),
   ;
 
   private String msg;
@@ -20,6 +20,6 @@ public enum Message {
   }
 
   public String getWinner(String winner) {
-    return String.format("%s %s", this.WINNER_MESSAGE.getMsg(), winner);
+    return String.format("%s : %s", this.WINNER_MESSAGE.getMsg(), winner);
   }
 }

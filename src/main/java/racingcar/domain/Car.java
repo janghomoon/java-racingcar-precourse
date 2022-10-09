@@ -21,7 +21,7 @@ public class Car {
   }
 
   public String getResultMessage() {
-    return String.format("%s : %s",this.name, this.printMark);
+    return String.format("%s : %s", this.name, this.printMark);
   }
 
 
@@ -33,8 +33,8 @@ public class Car {
     }
     addMark(mark);
   }
-  //움직이면
-  public void addMark(String mark) { this.printMark += mark;}
+
+  private void addMark(String mark) { this.printMark += mark;}
 
   private void addDistance() {
     this.distance++;
