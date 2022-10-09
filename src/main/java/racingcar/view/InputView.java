@@ -24,7 +24,7 @@ public class InputView {
   }
 
   public static Integer getGameCount() {
-    System.out.println(Message.COLLECT_MESSAGE.getMsg());
+    System.out.println(Message.ROUND_COUNT_MESSAGE.getMsg());
     String input = Console.readLine();
     ValidationUtil.isNull(input);
     return Integer.valueOf(input);
