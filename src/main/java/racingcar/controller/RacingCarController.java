@@ -14,9 +14,12 @@ public class RacingCarController {
   public void run() {
     List<String> carNames = setCarNames();
     Integer gameCount = setGameCount();
-
+    setGame(carNames, gameCount);
+    gameStart();
   }
-
+  private void gameStart() {
+    racingCarService.start();
+  }
   private List<String> setCarNames() {
     return InputView.getCarNames();
   }
