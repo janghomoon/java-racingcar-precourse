@@ -1,21 +1,20 @@
 package racingcar.util;
 
 import org.junit.platform.commons.util.StringUtils;
+import racingcar.code.Message;
 
 public class ValidationUtil {
 
   private static final Integer MAX_LENGTH = 5;
-  public static boolean isMaxLength(String input) throws IllegalArgumentException {
+  public static void isMaxLength(String input) throws IllegalArgumentException {
     if (input.length() > MAX_LENGTH) {
-      return true;
+      throw new IllegalArgumentException(Message.ERROR_NAME_LENGTH.getMsg());
     }
-    return false;
   }
 
-  public static boolean isNull(String input) throws IllegalArgumentException {
+  public static void isNull(String input) throws IllegalArgumentException {
     if(StringUtils.isBlank(input)) {
-      return true;
+      throw new IllegalArgumentException(Message.ERROR_INPUT_BLANK.getMsg());
     }
-    return false;
   }
 }
