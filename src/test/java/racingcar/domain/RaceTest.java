@@ -16,9 +16,9 @@ public class RaceTest {
   @BeforeEach
   void setUp() {
     cars = new ArrayList<>();
-    cars.add(new Car("pobi",1));
-    cars.add(new Car("bob",0));
-    cars.add(new Car("woni",0));
+    cars.add(new Car("pobi",1, ""));
+    cars.add(new Car("bob",0, ""));
+    cars.add(new Car("woni",0, ""));
     race = new Race(cars, 1);
   }
 
