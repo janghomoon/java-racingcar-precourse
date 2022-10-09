@@ -5,11 +5,9 @@ import racingcar.code.Message;
 
 public class OutputView {
 
-  public static void roundResult(List<String> roundResults) {
+  public static void roundResult(String roundResult) {
     System.out.println(Message.ROUND_END_MESSAGE.getMsg());
-    for (String result : roundResults) {
-      System.out.println(result);
-    }
+    System.out.println(roundResult);
   }
 
   public static void winnerResult(String winner) {
