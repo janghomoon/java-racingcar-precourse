@@ -29,8 +29,8 @@ public class Race {
 
   public Integer getMaxDistance() {
     Integer maxDistance = 0;
-    for (int idx = 0; idx < cars.size(); idx++) {
-      maxDistance = compareToDistances(maxDistance, cars.get(idx));
+    for (Car car : this.cars) {
+      maxDistance = compareToDistances(maxDistance, car);
     }
     return maxDistance;
   }
@@ -44,8 +44,8 @@ public class Race {
   public String getChampionName() {
     String championNames = "";
     Integer maxDistance = getMaxDistance();
-    for (int idx = 0; idx < cars.size(); idx++) {
-      championNames += getTopRankCar(maxDistance, cars.get(idx));
+    for (Car car : this.cars) {
+      championNames += getTopRankCar(maxDistance, car);
     }
     return championNames.substring(MIN_SUBSTRING_INDEX, championNames.length()-2);
   }

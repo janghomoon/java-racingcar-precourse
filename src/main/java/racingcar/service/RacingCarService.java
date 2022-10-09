@@ -25,11 +25,11 @@ public class RacingCarService {
   }
 
   private void setCarDistance(List<Car> cars) {
-    cars.forEach(car -> {
+    for (Car car : cars) {
       car.isMove(RandomUtil.getRandomNumber());
       System.out.println(car.getResultMessage());
       OutputView.roundResult(car.getResultMessage());
-    });
+    }
   }
 
   private void winner() {

@@ -5,7 +5,7 @@ public class Car {
   private Integer distance;
   private String printMark;
   private final Integer POSSIBLE_MOVE = 3;
-
+  private final String MARK = "-";
   public Car(String name, Integer distance, String printMark) {
     this.name = name;
     this.distance = distance;
@@ -29,7 +29,7 @@ public class Car {
     String mark = " ";
     if (ranDomDistance > POSSIBLE_MOVE) {
       addDistance();
-      mark ="-";
+      mark = MARK;
     }
     addMark(mark);
   }
